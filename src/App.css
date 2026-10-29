@@ -1,0 +1,221 @@
+/* src/App.css - Atualizado com cores sóbrias e botão Google tradicional */
+:root {
+  --cf-card-radius: 18px;
+  --cf-bg-dark: #0b1220;
+  --cf-card-bg: #131d31;
+  --cf-border: rgba(148, 163, 184, 0.16);
+  --cf-text: #f8fafc;
+  --cf-muted: #9ba9be;
+  --cf-entrada: #4ade80; /* Verde mais sóbrio */
+  --cf-saida: #f87171;   /* Vermelho mais sóbrio */
+  --cf-reserva: #60a5fa;
+  --cf-invest: #fbbf24;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: radial-gradient(circle at top, rgba(32, 107, 196, .18), transparent 38rem),
+              linear-gradient(135deg, #0b1220 0%, #0f172a 45%, #070d19 100%);
+  color: var(--cf-text);
+  min-height: 100vh;
+  padding-bottom: 95px;
+}
+
+.cf-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.cf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.1rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--cf-border);
+}
+
+.cf-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cf-logo-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cf-reserva);
+  background: linear-gradient(145deg, rgba(32, 107, 196, .25), rgba(32, 107, 196, .08));
+  border: 1px solid rgba(96, 165, 250, .3);
+}
+
+.cf-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.cf-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.1rem;
+}
+
+.cf-card {
+  background: var(--cf-card-bg);
+  border: 1px solid var(--cf-border);
+  border-radius: var(--cf-card-radius);
+  padding: 1.15rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .22);
+}
+
+.cf-card-paid {
+  border-color: rgba(74, 222, 128, 0.45);
+  background: linear-gradient(145deg, rgba(74, 222, 128, 0.08), var(--cf-card-bg));
+}
+
+.cf-alert-rombo {
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  border-radius: var(--cf-card-radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+.kind-entrada { background: rgba(74, 222, 128, .15); color: #4ade80; }
+.kind-saida { background: rgba(248, 113, 113, .15); color: #f87171; }
+.kind-reserva { background: rgba(96, 165, 250, .15); color: #60a5fa; }
+.kind-investimento { background: rgba(251, 191, 36, .15); color: #fbbf24; }
+
+.cf-input, .cf-select {
+  background: #090d16;
+  border: 1px solid var(--cf-border);
+  color: var(--cf-text);
+  border-radius: 10px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.cf-btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 0.55rem 0.95rem;
+  font-weight: 600;
+  font-size: 0.86rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: opacity 0.15s;
+}
+.cf-btn:hover { opacity: 0.9; }
+.cf-btn-primary { background: #2563eb; color: #fff; }
+.cf-btn-success { background: #16a34a; color: #fff; }
+.cf-btn-danger { background: rgba(248, 113, 113, .18); color: #f87171; border: 1px solid rgba(248, 113, 113, .3); }
+.cf-btn-ghost { background: rgba(148, 163, 184, .1); color: var(--cf-text); }
+
+/* Botão Google Tradicional */
+.cf-btn-google {
+  background: #1e293b;
+  color: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cf-btn-google:hover {
+  background: #334155;
+}
+
+.cf-progress-bg {
+  height: 8px;
+  background: rgba(148, 163, 184, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0.6rem 0;
+}
+.cf-progress-bar {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.cf-list-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--cf-border);
+  gap: 0.75rem;
+}
+.cf-list-row:last-child { border-bottom: 0; }
+
+.cf-bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1040;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  background: rgba(11, 18, 32, 0.95);
+  border-top: 1px solid var(--cf-border);
+  backdrop-filter: blur(14px);
+}
+
+.cf-nav-btn {
+  border: 0;
+  background: transparent;
+  color: var(--cf-muted);
+  padding: 0.55rem 1.25rem;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.cf-nav-btn.active {
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.15);
+}
